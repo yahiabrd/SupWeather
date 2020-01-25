@@ -1,0 +1,234 @@
+#header {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    box-shadow: 0px 15px 10px -15px #111;
+}
+
+html{
+    min-height: 100%;
+    position:relative;
+}
+
+#header li {
+    display: inline;
+    list-style: none;
+    padding-right: 10px;
+}
+
+#header a {
+    text-decoration: none;
+    color: #432C85;
+}
+
+#header li:nth-child(2) {
+    padding-left: 32%;
+}
+
+.floatright {
+    float: right;
+}
+
+.titlePage,
+.titleSite {
+    font-size: 20px;
+}
+
+#logo {
+    width: 30px;
+    height: 30px;
+}
+
+footer {
+    text-align: center;
+}
+
+#login,
+#register,
+#home {
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+#light {
+    cursor: pointer;
+    height: 30px;
+}
+
+.darkLight {
+    background: linear-gradient(#A383ED, #34226C);
+    color: white;
+}
+
+.block,
+.blockspecial {
+    background-color: white;
+    border-radius: 30px;
+    width: 300px;
+    height: 500px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: black;
+    box-shadow: 0 0 20px #111;
+    display: inline-block;
+    margin-right: 50px;
+    margin-bottom: 30px;
+    position: unset;
+}
+
+.miniblock{
+    background-color: white;
+    border-radius: 30px;
+    width: 190px;
+    height: 400px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: black;
+    box-shadow: 0 0 20px #111;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    position: unset;
+}
+
+.miniblock .imgWeather img{
+    height: 100%;
+    width: 150px;
+}
+
+.center {
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+.details {
+    text-decoration: none;
+    color: inherit;
+}
+
+.details:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.block:hover {
+    opacity: 0.8;
+}
+
+.block li, .miniblock li {
+    float: left;
+    list-style: none;
+}
+
+.imgWeather img {
+    margin-top: -30px;
+    width: 200px;
+    height: 100%;
+}
+
+.temperature {
+    padding-bottom: 10px;
+    font-size: 60px;
+}
+
+.country {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.min {
+    color: #00ff9b;
+}
+
+.max {
+    color: red;
+}
+
+.celsius {
+    font-size: 40px;
+    position: absolute;
+}
+
+.imgtemp {
+    width: 20px;
+    height: 20px;
+}
+
+.addbtn img {
+    width: 200px;
+    height: 100%;
+}
+
+.addCity img {
+    height: 100%;
+    width: 200px;
+}
+
+#imgblockspecial {
+    margin-top: 47px;
+}
+
+.specialHideblock {
+    color: black;
+    background-color: #eee;
+    color: white;
+    width: 600px;
+    height: 250px;
+    padding: 20px;
+    padding-top: 50px;
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    border-radius: 20px;
+    opacity: 0.8;
+}
+
+.intro {
+    padding-bottom: 30px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.specialaddbtn {
+    margin-top: 30px;
+}
+
+.redcross img {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+}
+
+.redcross {
+    float: right;
+    margin-right: 20px;
+    margin-top: -17px;
+    cursor: pointer;
+}
+
+.dangerblock {
+    margin-top: -50px;
+    font-weight: bold;
+}
+
+.spe {
+    margin-bottom: 20px;
+    margin-top: -30px;
+}
+
+.manage {
+    margin-top: 10px;
+}
+
+.return {
+    width: 30px;
+    height: 30px;
+}
+
+.topHome {
+    margin-top: -20px;
+    margin-bottom: 50px;
+}

@@ -1,0 +1,44 @@
+/*responsive*/
+
+@media screen and (max-width: 767px) {
+    #header li {
+        display: block;
+        list-style: none;
+        padding-right: 0;
+        padding-bottom: 5px;
+    }
+
+    #header li:nth-child(2) {
+        padding-left: 0%;
+    }
+
+    .floatright{
+        float: none;
+    }
+
+    .block, .blockspecial{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .specialHideblock {
+        color: black;
+        background-color: #eee;
+        color: white;
+        width: 300px;
+        height: 250px;
+        padding: 20px;
+        padding-top: 50px;
+        position: fixed;
+        top: 20%;
+        left: 10%;
+        border-radius: 20px;
+        opacity: 0.8;
+    }
+
+    .return {
+        width: 15px;
+        height: 15px;
+    }
+}

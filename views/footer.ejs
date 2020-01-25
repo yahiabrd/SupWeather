@@ -1,0 +1,18 @@
+
+    <footer>
+        &copy;2020 Supweather
+    </footer>
+    </div>
+    <script src="/javascripts/script.js"></script>
+    <script>
+        console.log(document.cookie);
+        
+        //localstorage
+        if (localStorage.getItem("theme") == "Dark") {
+            sessionDarkMode();
+        }else if(localStorage.getItem("theme") == "Light"){
+            sessionLightMode();
+        }
+    </script>
+</body>
+</html>

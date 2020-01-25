@@ -1,0 +1,47 @@
+<% include header %>
+
+<div id="home">
+    <div class="topHome">
+        <a href="/home"><img src="/images/return.png" class="return"></a>
+        <div class="center">
+            This is the week forecast for the city : <b><%= locals.city %></b> from <b><%= locals.country %></b>
+        </div>
+    </div>
+    <% if(locals.infosWeek ){ %>
+        <% for(var i = 0;i < locals.infosWeek.length; i++){ %>
+        <div class="miniblock">
+            <div class="country"><%= locals.days[i] %></div>
+            <div class="imgWeather">
+                <% if(locals.infosWeek[i][0] == "Clouds" ){ %>
+                <img class="tmpImg" src="/images/cloudy_light.png" />
+                <% } else if(locals.infosWeek[i][0] == "Rain" || locals.infosWeek[i][0] == "Drizzle") {%>
+                <img class="tmpImg" src="/images/raining_light.png" />
+                <% } else if(locals.infosWeek[i][0] == "Clear" ) {%>
+                <img class="tmpImg" src="/images/sunny_light.png" />
+                <% } else if(locals.infosWeek[i][0] == "Thunderstorm" ) {%>
+                <img class="tmpImg" src="/images/storm_light.png" />
+                <% } else if(locals.infosWeek[i][0] == "Fog" || locals.infosWeek[i][0] == "Dust" || locals.infosWeek[i][0] == "Haze" ) {%>
+                <img class="tmpImg" src="/images/fog_light.png" />
+                <% } else if(locals.infosWeek[i][0] == "Snow" ) {%>
+                <img class="tmpImg" src="/images/snowing_light.png" />
+                <% } %>
+            </div>
+            <div class="temperature">
+                <%= locals.infosWeek[i][1] %><span class="celsius">°</span>
+            </div>
+            <ul>
+                <li style="float:left;">
+                    <img class="imgtemp" src="/images/min.png" /><br>
+                    <%= locals.infosWeek[i][2] %><br><span class="min">Min</span>
+                </li>
+                <li style="float: right;margin-right: 30px;">
+                    <img class="imgtemp" src="/images/max.png" /><br>
+                    <%= locals.infosWeek[i][3] %><br><span class="max">Max</span>
+                </li>
+            </ul>
+        </div>
+        <% } %>
+    <% } %>
+</div>
+
+<% include footer %>

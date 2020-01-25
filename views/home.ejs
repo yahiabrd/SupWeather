@@ -1,0 +1,95 @@
+<% include header %>
+
+<div id="home">
+    <% if(locals.viewErrorMsg ){ %>
+    <div class="alert alert-danger spe" role="alert">
+        <%= locals.viewErrorMsg %>
+    </div>
+    <% } %>
+
+    <% if(locals.viewSuccess ){ %>
+    <div class="alert alert-success spe" role="alert">
+        <%= locals.viewSuccess %>
+    </div>
+    <% } %>
+
+    <% if(locals.city ){ %>
+    <% for(var i = 0;i < locals.city.length; i++){ %>
+    <div class="block">
+        <a class="details" title="click to see the week forecast" href="/home/details/<%= locals.city[i]["city"] %>">
+            <div class="country"><%= locals.city[i]["city"] %> </div>
+            <div class="imgWeather">
+                <% if(locals.city[i]["weather"] == "Clouds" ){ %>
+                <img class="tmpImg" src="/images/cloudy_light.png" />
+                <% } else if(locals.city[i]["weather"] == "Rain" || locals.city[i]["weather"] == "Drizzle") {%>
+                <img class="tmpImg" src="/images/raining_light.png" />
+                <% } else if(locals.city[i]["weather"] == "Clear" ) {%>
+                <img class="tmpImg" src="/images/sunny_light.png" />
+                <% } else if(locals.city[i]["weather"] == "Thunderstorm" ) {%>
+                <img class="tmpImg" src="/images/storm_light.png" />
+                <% } else if(locals.city[i]["weather"] == "Fog" || locals.city[i]["weather"] == "Dust" || locals.city[i]["weather"] == "Haze" || locals.city[i]["weather"] == "Mist") {%>
+                <img class="tmpImg" src="/images/fog_light.png" />
+                <% } else if(locals.city[i]["weather"] == "Snow" ) {%>
+                <img class="tmpImg" src="/images/snowing_light.png" />
+                <% } %>
+            </div>
+            <div class="temperature">
+                <%= locals.city[i]["temperature"] %><span class="celsius">°</span>
+            </div>
+            <ul>
+                <li style="float:left;">
+                    <img class="imgtemp" src="/images/min.png" /><br>
+                    <%= locals.city[i]["temp_min"] %><br><span class="min">Min</span><br>
+                    <a href="/home/updateCity/<%= locals.city[i]["city"] %>">
+                        <img class="imgtemp manage" src="/images/refresh_light.png" />
+                    </a>
+                </li>
+                <li style="float: right;margin-right: 30px;">
+                    <img class="imgtemp" src="/images/max.png" /><br>
+                    <%= locals.city[i]["temp_max"] %><br><span class="max">Max</span><br>
+                    <a href="/home/deleteCity/<%= locals.city[i]["_id"] %>">
+                        <img class="imgtemp manage" src="/images/delete.png" />
+                    </a>
+                </li>
+            </ul>
+        </a>
+    </div>
+    <% } %>
+    <% } %>
+
+    <div class="blockspecial">
+        <div class="country">ADD CITY</div>
+        <div id="imgblockspecial">
+            <div class="addbtn" style="cursor: pointer;">
+                <img id="btnimg" src="/images/btnAddWhite.png" onclick="addCity()">
+            </div>
+            <div class="addCity">
+                <img id="addimg" src="/images/addCityLight.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="specialHideblock" style="display:none;">
+        <div class="intro">
+            <div class="redcross">
+                <img src="/images/redCross.png" onclick="hideSection();" />
+            </div>
+            <div class="col text-center">
+                Hello <%= locals.name %>, which city do you want to add ?
+            </div>
+        </div>
+        <div class="form">
+            <form method="post" action="/home/addCity">
+                <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Enter city" name="city" required>
+                </div>
+                <div class="col text-center specialaddbtn">
+                    <button type="submit" class="btn btn-primary">Add this city</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include footer %>
