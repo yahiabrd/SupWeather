@@ -2,7 +2,7 @@
 
 Weather app using the Openweather API,
 
-you need to npm install the packages for launch this project
+you need to npm install the packages to run this project
 
 
 ![Image](https://i.ibb.co/whyZVLB/snap1.png)
