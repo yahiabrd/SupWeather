@@ -12,7 +12,7 @@
     "csurf": "^1.10.0",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
-    "express": "~4.16.1",
+    "express": "~4.17.3",
     "express-rate-limit": "^5.0.0",
     "express-session": "^1.17.0",
     "fs": "0.0.1-security",
